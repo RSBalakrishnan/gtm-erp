@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  gtm-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gtm-v4-gateway
+    restart: unless-stopped
+    ports:
+      - "18793:18793"
+    env_file:
+      - .env
+    environment:
+      - OPENCLAW_CONFIG_PATH=/app/openclaw.json
+      - NODE_ENV=production
+    volumes:
+      # Agent definitions (live-reload during development)
+      - ./agents/orchestrator:/app/agents/orchestrator
+      - ./agents/researcher:/app/agents/researcher
+      - ./agents/summarizer:/app/agents/summarizer
+      - ./agents/outreach-writer:/app/agents/outreach-writer
+      - ./agents/tracker:/app/agents/tracker
+      # Gateway config (live-reload)
+      - ./openclaw.json:/app/openclaw.json
+      # Environment variables
+      - ./.env:/app/.env
+      # Persistent OpenClaw state (sessions, chat history)
+      - openclaw-state:/root/.openclaw
+      # Logs
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18793/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  openclaw-state:
+    driver: local

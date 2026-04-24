@@ -6,7 +6,9 @@
 !manual_run.json
 !models.json
 !auth-profiles.json
-!gmail-inte-489812-c54c52241fb8.json
+# !gmail-inte-489812-c54c52241fb8.json
+!**/SKILL.md
+!**/skills/**/*.json
 
 # Logs, Sessions, and State
 **/logs/
@@ -16,9 +18,12 @@
 **/state/
 **/temp/
 **/outputs/
-**/workspace/
 **/data/
 .openclaw/
+
+# Docker
+openclaw-state/
+docker-compose.override.yml
 
 # Backups and Temporary
 *.last-good

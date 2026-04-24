@@ -1,0 +1,31 @@
+# Version control
+.git
+.gitignore
+
+# Python virtual environments
+venv/
+agents/gtm-v2/venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Legacy agent state
+agents/gtm-v2/.openclaw/
+.openclaw/
+
+# macOS
+.DS_Store
+
+# Logs (mounted as volume)
+logs/
+
+# Temp files
+agents/gtm-v2/temp_*.json
+agents/gtm-v2/scratch/
+
+# Node modules (will be installed in container)
+node_modules/
+
+# Documentation
+*.pdf
+README.md
