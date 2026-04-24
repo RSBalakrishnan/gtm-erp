@@ -75,7 +75,7 @@
       ]
     },
     "bedrock-minimax": {
-      "baseUrl": "https://bedrock-mantle.us-east-1.api.aws/v1",
+      "baseUrl": "${BEDROCK_BASE_URL}",
       "apiKey": "${OPENCLAW_BEDROCK_API_KEY}",
       "api": "openai-completions",
       "models": [

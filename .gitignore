@@ -6,7 +6,7 @@
 !manual_run.json
 !models.json
 !auth-profiles.json
-# !gmail-inte-489812-c54c52241fb8.json
+!gmail-inte-489812-c54c52241fb8.json
 !**/SKILL.md
 !**/skills/**/*.json
 
