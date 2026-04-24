@@ -1,0 +1,58 @@
+# Secrets and Config
+.env
+*.json
+!openclaw.json
+!batch-openclaw.json
+!manual_run.json
+!models.json
+
+# Logs, Sessions, and State
+**/logs/
+*.log
+**/sessions/
+**/session_data/
+**/state/
+**/temp/
+**/outputs/
+**/workspace/
+**/data/
+.openclaw/
+
+# Backups and Temporary
+*.last-good
+*.bak
+*.old
+*.backup
+*.tmp
+*.temp
+*.json.*
+~*
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# OS
+.DS_Store
+Thumbs.db

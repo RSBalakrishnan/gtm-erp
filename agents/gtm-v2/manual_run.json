@@ -1,0 +1,272 @@
+{
+  "payloads": [
+    {
+      "text": "```json\n{\n  \"college_name\": \"Sri Venkateswara Ayurvedic College, Tirupati\",\n  \"website\": \"https://www.svaych.com\",\n  \"website_extraction_research\": \"### Summary\\n- Institution: Sri Venkateswara Ayurvedic College (SVAYCH)\\n- Website Type: Static (Blogger Platform)\\n- Parent Organization: TTD (Tirumala Tirupati Devasthanams) - Government\\n- Location: Tirupati, Andhra Pradesh\\n\\n### [Ayurvedic Medical College Network]\\n- Established in 1983 by TTD Devasthanams\\n- Affiliated to Dr. NTR University of Health Sciences, Vijayawada\\n- Offers BAMS (UG) since 1983 - 36 batches passed\\n- Offers PG courses since 2009-10 in 6 departments\\n- Attached teaching hospital (100,000+ patients/year)\\n- Has Shri Srinivasa Ayurveda Pharmacy\\n\\n### Key Insights\\n- Status: Active website with basic Blogger platform\\n- Digital Gaps: \\n  - Uses external MyLOFT portal (not integrated)\\n  - No dedicated student/admission portal\\n  - No online fee payment system visible\\n  - Manual processes likely for admissions/exams\\n- Type: Government Ayurvedic Medical College\\n- GTM Assessment: IN SCOPE\\n- Recommendation: Strong prospect - government college with manual processes\\n\\n🔥 Lead Score: 🟢 HOT - Static Blogger website with manual processes. TTD-funded government institution. High opportunity for campus ERP. #\",\n  \"outreach_templates\": {\n    \"email_1\": \"Dear Sir,\\n\\nI hope this email finds you well. I recently came across Sri Venkateswara Ayurvedic College website and was impressed by your institution's legacy - 36 batches of BAMS graduates since 1983, and 11 batches of PG scholars.\\n\\nI am reaching out from OnCampus ERP - we specialize in helping medical and ayurvedic colleges streamline their administrative operations.\\n\\nI noticed your college uses external platforms like MyLOFT for library resources, and admissions are managed through NEET-based processes. This indicates potential opportunities to consolidate your digital infrastructure:\\n\\nOur comprehensive solution can help you:\\n• Centralize student admissions and NEET counseling data\\n• Automate fee collection and pharmacy inventory tracking\\n• Manage hospital patient records alongside academic data\\n• Streamline examination and assessment processes\\n\\nAs a TTD-supported government institution, you understand the importance of efficient resource management. We'd welcome the opportunity to discuss how we can support SVAYCH's digital transformation.\\n\\nWould you be available for a brief 15-minute consultation this week?\\n\\nBest regards,\\nSales Team\\nOnCampus ERP\\nhttps://www.oncampuserp.com/?utm_source=gtm_automation&lead_id=999\",\n    \"email_2\": \"Dear Sir,\\n\\nFollowing up on my previous email regarding digital transformation for Sri Venkateswara Ayurvedic College.\\n\\nWith 36 years of excellence in Ayurvedic education and a teaching hospital serving 100,000+ patients annually, SVAYCH has significant administrative requirements. Managing student records, hospital pharmacy inventory, fee collections, and examinations can be challenging without an integrated system.\\n\\nMany government ayurvedic medical colleges in Andhra Pradesh have begun adopting digital tools to improve efficiency. Our ERP solution is designed specifically for health sciences institutions and is available at competitive pricing for government colleges.\\n\\nI would be happy to share a case study from similar institutions in the region, or provide a customized demo based on your specific needs.\\n\\nWould you have 10 minutes this week for a quick call?\\n\\nBest regards,\\nSales Team\\nOnCampus ERP\",\n    \"email_3\": \"Dear Sir,\\n\\nJust a gentle reminder about OnCampus ERP and how we can help streamline operations at Sri Venkateswara Ayurvedic College.\\n\\nOur platform has helped 500+ colleges reduce administrative workload by 40%. For institutions like SVAYCH with attached hospitals and pharmacy operations, our comprehensive solution can integrate:\\n- Student lifecycle management\\n- Hospital-patient record coordination\\n- Pharmacy inventory tracking\\n- Examination and assessment management\\n\\nWe offer a no-obligation pilot program for qualifying government institutions. As part of TTD's noble mission of propagating Vedic sciences, we believe efficient backend operations can help you focus more on patient care and education excellence.\\n\\nLet me know if you would like to explore this opportunity.\\n\\nBest regards,\\nSales Team\\nOnCampus ERP\"\n  },\n  \"contacts\": {\n    \"emails\": [\n      \"svaycprincipal.tpt@gmail.com\"\n    ],\n    \"phones\": [\n      \"9330029940\",\n      \"9637533907\"\n    ],\n    \"linkedin_profiles\": []\n  },\n  \"classification\": {\n    \"target_persona\": \"Principal\"\n  },\n  \"tracking\": {\n    \"status\": \"ready_for_outreach\"\n  }\n}\n```",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 46333,
+    "agentMeta": {
+      "sessionId": "d66d7e8b-5cbc-45a3-9a6f-ccf9be8e0b45",
+      "provider": "bedrock-minimax",
+      "model": "minimax.minimax-m2.5",
+      "lastCallUsage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776758921163,
+      "sessionId": "manual-test-219",
+      "sessionKey": "agent:gtm-v2:main",
+      "provider": "bedrock-minimax",
+      "model": "minimax.minimax-m2.5",
+      "workspaceDir": "/Users/apple/Desktop/gtm/agents/gtm-v2",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 22298,
+        "projectContextChars": 11506,
+        "nonProjectContextChars": 10792
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/AGENTS.md",
+          "missing": false,
+          "rawChars": 1158,
+          "injectedChars": 1158,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/SOUL.md",
+          "missing": false,
+          "rawChars": 6660,
+          "injectedChars": 6660,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/TOOLS.md",
+          "missing": false,
+          "rawChars": 1853,
+          "injectedChars": 1853,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/IDENTITY.md",
+          "missing": false,
+          "rawChars": 179,
+          "injectedChars": 179,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 167,
+          "injectedChars": 167,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/BOOTSTRAP.md",
+          "missing": true,
+          "rawChars": 0,
+          "injectedChars": 74,
+          "truncated": false
+        },
+        {
+          "name": "MEMORY.md",
+          "path": "/Users/apple/Desktop/gtm/agents/gtm-v2/MEMORY.md",
+          "missing": false,
+          "rawChars": 291,
+          "injectedChars": 291,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 0,
+        "entries": []
+      },
+      "tools": {
+        "listChars": 2453,
+        "schemaChars": 18808,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 392,
+            "propertiesCount": 4
+          },
+          {
+            "name": "edit",
+            "summaryChars": 129,
+            "schemaChars": 591,
+            "propertiesCount": 6
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 313,
+            "propertiesCount": 3
+          },
+          {
+            "name": "exec",
+            "summaryChars": 181,
+            "schemaChars": 1086,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 85,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1683,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 122,
+            "schemaChars": 1800,
+            "propertiesCount": 37
+          },
+          {
+            "name": "cron",
+            "summaryChars": 2689,
+            "schemaChars": 690,
+            "propertiesCount": 13
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 4872,
+            "propertiesCount": 91
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 464,
+            "schemaChars": 497,
+            "propertiesCount": 12
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 54,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 36,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 84,
+            "schemaChars": 273,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 198,
+            "schemaChars": 1179,
+            "propertiesCount": 17
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 207,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 175,
+            "schemaChars": 1084,
+            "propertiesCount": 9
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 334,
+            "schemaChars": 139,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 151,
+            "schemaChars": 128,
+            "propertiesCount": 3
+          }
+        ]
+      }
+    },
+    "stopReason": "stop"
+  }
+}
