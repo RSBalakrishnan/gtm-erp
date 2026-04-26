@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.24",
+    "lastTouchedAt": "2026-04-24T09:30:00.000Z"
+  },
+  "logging": {
+    "level": "info",
+    "file": "/app/logs/gtm-v4.log",
+    "redactSensitive": "off"
+  },
+  "browser": {
+    "headless": true,
+    "noSandbox": true
+  },
+  "models": {
+    "providers": {
+      "bedrock-minimax": {
+        "baseUrl": "${BEDROCK_BASE_URL}",
+        "apiKey": "${OPENCLAW_BEDROCK_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "minimax.minimax-m2.5",
+            "name": "MiniMax m2.5 (Bedrock)"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "bedrock-minimax/minimax.minimax-m2.5",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "timeoutSeconds": 3600,
+      "sandbox": {
+        "browser": {
+          "enabled": true
+        }
+      }
+    },
+    "list": [
+      {
+        "id": "orchestrator",
+        "name": "GTM Sales Orchestrator V4",
+        "agentDir": "/app/agents/orchestrator",
+        "workspace": "/app/agents/orchestrator/workspace",
+        "model": "bedrock-minimax/minimax.minimax-m2.5",
+        "skills": [
+          "browser",
+          "fetch",
+          "fs",
+          "shell"
+        ]
+      },
+      {
+        "id": "researcher",
+        "name": "GTM Research Analyst",
+        "agentDir": "/app/agents/researcher",
+        "workspace": "/app/agents/researcher/workspace",
+        "model": "bedrock-minimax/minimax.minimax-m2.5",
+        "skills": [
+          "browser",
+          "fetch",
+          "shell"
+        ]
+      },
+      {
+        "id": "summarizer",
+        "name": "GTM Strategic Summarizer",
+        "agentDir": "/app/agents/summarizer",
+        "workspace": "/app/agents/summarizer/workspace",
+        "model": "bedrock-minimax/minimax.minimax-m2.5",
+        "skills": [
+          "shell",
+          "fs"
+        ]
+      },
+      {
+        "id": "outreach-writer",
+        "name": "GTM Outreach Specialist",
+        "agentDir": "/app/agents/outreach-writer",
+        "workspace": "/app/agents/outreach-writer/workspace",
+        "model": "bedrock-minimax/minimax.minimax-m2.5",
+        "skills": [
+          "shell",
+          "fs"
+        ]
+      },
+      {
+        "id": "tracker",
+        "name": "GTM Analytics Monitor",
+        "agentDir": "/app/agents/tracker",
+        "workspace": "/app/agents/tracker/workspace",
+        "model": "bedrock-minimax/minimax.minimax-m2.5",
+        "skills": [
+          "shell",
+          "fs",
+          "fetch"
+        ]
+      },
+      {
+        "id": "telemetry",
+        "name": "GTM Telemetry Agent",
+        "agentDir": "/app/agents/telemetry",
+        "workspace": "/app/agents/telemetry/workspace",
+        "model": "bedrock-minimax/minimax.minimax-m2.5",
+        "skills": [
+          "shell",
+          "fetch"
+        ]
+      }
+    ]
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "open",
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "allowFrom": ["*"],
+      "groupAllowFrom": ["*"],
+      "groupPolicy": "open",
+      "streaming": {
+        "mode": "partial"
+      }
+    },
+    "whatsapp": {
+      "enabled": false
+    }
+  },
+  "gateway": {
+    "port": 18793,
+    "mode": "local",
+    "bind": "0.0.0.0",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18793",
+        "http://127.0.0.1:18793"
+      ]
+    },
+    "auth": {
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "browser": {
+        "enabled": true
+      },
+      "whatsapp": {
+        "enabled": false
+      }
+    }
+  }
+}

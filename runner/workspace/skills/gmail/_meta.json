@@ -1,0 +1,6 @@
+{
+  "ownerId": "${GMAIL_SKILL_OWNER_ID}",
+  "slug": "gmail",
+  "version": "1.0.6",
+  "publishedAt": 1770755759017
+}
