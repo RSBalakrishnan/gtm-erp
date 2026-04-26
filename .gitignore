@@ -1,6 +1,6 @@
 # Secrets and Config
 .env
-*.json
+
 !openclaw.json
 !batch-openclaw.json
 !manual_run.json

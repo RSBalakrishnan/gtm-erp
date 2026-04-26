@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "linkedin": {
+      "version": "1.0.0",
+      "installedAt": 1774358165660
+    },
+    "gmail": {
+      "version": "1.0.6",
+      "installedAt": 1774358168695
+    }
+  }
+}

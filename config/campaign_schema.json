@@ -1,0 +1,197 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GTM Campaign Context",
+  "description": "The contract between the Marketing Platform Backend and the GTM Engine. Every campaign must conform to this schema.",
+  "type": "object",
+  "required": ["campaign_id", "campaign_name", "product", "audience", "research_instructions", "outreach_strategy", "scoring_rubric"],
+  "properties": {
+    "campaign_id": {
+      "type": "string",
+      "description": "Unique campaign identifier from the Backend"
+    },
+    "campaign_name": {
+      "type": "string",
+      "description": "Human-readable campaign name"
+    },
+
+    "product": {
+      "type": "object",
+      "description": "The product/service being marketed in this campaign",
+      "required": ["name", "website", "key_features", "value_propositions"],
+      "properties": {
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "website": { "type": "string", "format": "uri" },
+        "demo_url": { "type": "string", "format": "uri" },
+        "key_features": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "value_propositions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      }
+    },
+
+    "audience": {
+      "type": "object",
+      "description": "Who this campaign targets",
+      "required": ["domain", "target_type", "ideal_profile", "target_personas"],
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "Industry/sector (e.g., 'B2B SaaS', 'Higher Education', 'Real Estate')"
+        },
+        "target_type": {
+          "type": "string",
+          "enum": ["company", "institution", "individual", "organization"],
+          "description": "What kind of entity each target is"
+        },
+        "ideal_profile": {
+          "type": "string",
+          "description": "Free-text description of the ideal target profile"
+        },
+        "target_personas": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Job titles / roles of decision makers to target",
+          "minItems": 1
+        },
+        "locations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Geographic focus areas"
+        },
+        "filters": {
+          "type": "object",
+          "description": "Optional filtering criteria (domain-specific)",
+          "additionalProperties": true
+        }
+      }
+    },
+
+    "research_instructions": {
+      "type": "object",
+      "description": "Tells the Researcher and Summarizer agents what to look for",
+      "required": ["what_to_look_for", "pages_to_crawl"],
+      "properties": {
+        "what_to_look_for": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Specific data points to extract during research",
+          "minItems": 1
+        },
+        "pages_to_crawl": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Website page types to prioritize (e.g., 'About', 'Pricing', 'Careers')",
+          "minItems": 1
+        },
+        "gap_mapping": {
+          "type": "object",
+          "description": "Maps discovered gaps to product solutions. Keys are gaps, values are solutions.",
+          "additionalProperties": { "type": "string" }
+        },
+        "domain_specific_fields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Extra fields to extract specific to this domain (e.g., 'NAAC grade', 'funding round')"
+        }
+      }
+    },
+
+    "outreach_strategy": {
+      "type": "object",
+      "description": "Configures the Outreach-Writer agent",
+      "required": ["goal", "email_sequence", "sender_persona"],
+      "properties": {
+        "goal": {
+          "type": "string",
+          "enum": ["book_demo", "schedule_call", "drive_signup", "request_meeting", "generate_interest"],
+          "description": "The conversion goal for this campaign"
+        },
+        "email_sequence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["stage", "delay_days", "tone", "angle"],
+            "properties": {
+              "stage": { "type": "string" },
+              "delay_days": { "type": "integer", "minimum": 0 },
+              "trigger": { "type": "string", "description": "What triggers this email (e.g., 'opened_no_reply', 'no_engagement')" },
+              "tone": { "type": "string" },
+              "angle": { "type": "string", "description": "The messaging angle for this email" }
+            }
+          },
+          "minItems": 1
+        },
+        "subject_line_template": {
+          "type": "string",
+          "description": "Template with {{placeholders}} for dynamic subject lines"
+        },
+        "sender_persona": {
+          "type": "object",
+          "required": ["name", "title", "company"],
+          "properties": {
+            "name": { "type": "string" },
+            "title": { "type": "string" },
+            "company": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "scoring_rubric": {
+      "type": "object",
+      "description": "How the Summarizer scores leads",
+      "required": ["hot", "warm", "cold"],
+      "properties": {
+        "hot": {
+          "type": "object",
+          "required": ["min_score", "criteria"],
+          "properties": {
+            "min_score": { "type": "integer" },
+            "criteria": { "type": "string" }
+          }
+        },
+        "warm": {
+          "type": "object",
+          "required": ["min_score", "criteria"],
+          "properties": {
+            "min_score": { "type": "integer" },
+            "criteria": { "type": "string" }
+          }
+        },
+        "cold": {
+          "type": "object",
+          "required": ["min_score", "criteria"],
+          "properties": {
+            "min_score": { "type": "integer" },
+            "criteria": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "targets": {
+      "type": "array",
+      "description": "Optional inline targets. Can also be loaded from DB separately.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "website"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "website": { "type": "string", "format": "uri" },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  }
+}
